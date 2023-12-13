@@ -1,0 +1,70 @@
+/* Styles for HomePage component */
+.home-page {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* .hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0;
+  } */
+  
+  /* .hero-content {
+    max-width: 50%;
+    text-align: left;
+    margin-left: 20px;
+  } */
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    color: #444;
+    margin-top: 20px;
+  }
+  
+  .action-buttons {
+    margin-top: 30px;
+  }
+  
+  .action-buttons button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .hero-image {
+    max-width: 40%;
+  }
+  
+  .features-section {
+    background-color: #fff;
+    padding: 40px;
+  }
+  
+  .features-section h2 {
+    font-size: 2rem;
+    color: #ff5722;
+  }
+  
+  .feature {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .feature-icon {
+    font-size: 2rem;
+    margin-right: 20px;
+    color: #ff5722;
+  }
+  

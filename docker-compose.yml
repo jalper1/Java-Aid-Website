@@ -1,0 +1,42 @@
+version: '3.8'
+services:
+  frontend:
+    build:
+      context: ./robo-aid-website
+    ports:
+      - "5173:5173"
+
+  backend:
+    build:
+      context: ./backend
+    environment:
+      - NODE_ENV=production
+    ports:
+      - "6007:6007"
+ 
+  db2:
+    image: mysql/mysql-server:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: beepboop
+      MYSQL_DATABASE: beepboop_db
+      MYSQL_ROOT_HOST: '%'
+    volumes:
+      - robo-aid-db:/var/lib/mysql
+    ports:
+      - "60666:3306"
+
+  phpmyadmin2:
+    image: phpmyadmin/phpmyadmin:latest
+    restart: always
+    depends_on:
+      - db2
+    environment:
+      PMA_HOST: db2
+      PMA_USER: root
+      PMA_PASSWORD: beepboop
+    ports:
+      - "60680:80"
+  
+volumes:
+  robo-aid-db:

@@ -1,0 +1,72 @@
+.tooltip-ip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.image-ip {
+  width: 24px;
+  height: 24px;
+}
+.instruction-page {
+  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  border-radius: 10px;
+  border: 1px solid black;
+  background-color: red;
+  opacity: 0;
+  transition: all 0.3s ease;
+  color: white;
+}
+.tooltip:hover .instruction-page {
+  width: auto;
+  height: auto;
+  padding: 8px;
+  opacity: 1;
+  z-index: 1;
+}
+
+.list-item-ip {
+  padding: 8px;
+  font-size: large;
+  font-weight: 700;
+}
+
+.down-right {
+  top: 0;
+  left: 0;
+}
+.tooltip:hover .down-right {
+  top: 0;
+  left: 0;
+}
+
+.down-left {
+  top: 0;
+  right: 0;
+}
+.tooltip:hover .down-left {
+  top: 0;
+  right: 0;
+}
+
+.up-right {
+  bottom: 0;
+  left: 0;
+}
+.tooltip:hover .up-right {
+  bottom: 0;
+  left: 0;
+}
+
+.up-left {
+  bottom: 0;
+  right: 0;
+}
+.tooltip:hover .up-left {
+  bottom: 0;
+  right: 0;
+}

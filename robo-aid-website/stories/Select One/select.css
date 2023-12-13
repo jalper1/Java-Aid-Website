@@ -1,0 +1,29 @@
+/* select.css */
+
+.select_class {
+    background-color: #fff;
+    color: black;
+    padding: 10px; /* Increase padding to make it bigger */
+    border-radius: 10px; /* Increase border-radius for rounded corners */
+    font-size: 18px; /* Increase font size */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5); /* Add a shadow */
+  }
+  
+  .select_class:hover {
+    background-color: #666; /*hovering gives a darker shadow*/
+    color: white;
+  }
+  
+  
+  .option-item {
+    /* Define your styles for the option items here */
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .option-item:hover {
+    /* Styles for when an option item is hovered */
+    background-color: #f0f0f0;
+    color: #555;
+  }
+  

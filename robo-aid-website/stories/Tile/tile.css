@@ -1,0 +1,14 @@
+.tile {
+  display: inline-block;
+  width: 96px;
+  height: 96px;
+  background: white;
+  border: 1px solid #d3d3d3;
+}
+.tile-wall {
+  background: black;
+}
+
+.tile-goal {
+  background: green;
+}

@@ -1,0 +1,102 @@
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  
+}
+
+.header {
+  width: 100%;
+  padding: 10px 0;
+  background-color: #dbbaba; /* Example color */
+  text-align: center; /* If you have a title or logo */
+}
+
+.page-content {
+  display: flex;
+  justify-content: flex-start; /* Aligns children to the start (left) */
+  align-items: flex-start; /* Aligns children to the top */
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  gap: 20px; /* Adds space between children */
+  flex-wrap: nowrap; /* Prevents wrapping of items */
+}
+
+.actions-container {
+  flex: 1; /* Allow the container to grow */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 200px; /* Set a minimum width */
+}
+
+.code-field {
+  flex: 2; /* Allows the code field to take twice as much space as the actions container */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10px;
+  min-width: 300px; /* Set a minimum width */
+}
+
+.code-placeholder {
+  height: 400px; /* Adjusted height for taller appearance */
+  width: 100%; /* Adjusted width to take full width of parent container */
+  background-color: white !important; /* Set background color to white */
+  padding: 10px;
+  font-family: monospace;
+  border: 1px solid #ccc;
+  border-radius: 10px; /* Adds rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle drop shadow */
+  overflow-y: auto; /* Allows scrolling vertically if content is longer than the container */
+}
+
+.select-dropdown {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%; /* Makes the select elements take full width of their container */
+}
+
+.maze {
+  flex: 3; /* Allows the maze to take the most space */
+  min-width: 400px; /* Set a minimum width */
+  max-height: 400px; /* Set a max-height to match the code placeholder */
+  display: flex; /* Ensures that the flex children are centered */
+  justify-content: center; /* Centers the image horizontally */
+  align-items: center; /* Centers the image vertically */
+  padding: 0; /* Ensure there's no padding causing overflow */
+  border: none; /* Ensure there's no border causing overflow */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  overflow-y: hidden !important; /* Hides any overflow, preventing scroll bars */
+}
+
+.maze img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* This makes sure that the image is scaled to fit within the container */
+}
+
+/* Responsive Design for smaller screens */
+@media screen and (max-width: 768px) {
+  .page-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .actions-container,
+  .code-field,
+  .maze {
+    flex: 0; /* Adjust this to change the flex grow/shrink ratio */
+    max-width: 200px; /* Set the maximum width you want for the maze */
+    max-height: 200px; /* Set the maximum height you want for the maze */
+    overflow: auto; /* Adds scroll if content is larger than the container */
+  }
+
+  .code-placeholder,
+  .maze {
+    height: auto; /* Adjust height on smaller screens for better display */
+  }
+}

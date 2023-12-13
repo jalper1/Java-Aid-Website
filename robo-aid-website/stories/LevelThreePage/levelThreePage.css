@@ -1,0 +1,115 @@
+/* Base styles to ensure consistency across different browsers */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Page container with a lighter and more suitable background for children */
+.page-container {
+  background-image: url("images/chalkboard.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh; /* Adjusted from 125vh to 100vh for full screen height */
+  background-color: #b3e5fc; /* Light blue background color as fallback */
+}
+
+/* Header with a subtle shadow for depth */
+.header {
+  z-index: 2;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+  padding: 1rem; /* Added padding for spacing */
+}
+
+/* Page content for a centered look and responsive design */
+.page-content {
+  display: flex;
+  justify-content: center; /* Centers content on the page */
+  align-items: flex-start; /* Aligns items to the top */
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+  padding: 64px;
+  gap: 32px; /* Space between elements */
+  max-width: 1200px; /* Max width for large screens */
+  margin: 0 auto; /* Centers the container */
+}
+
+/* Output box with proper alignment and spacing */
+.output-box {
+  flex: 1; /* Allows box to grow */
+  padding: 1rem;
+  align-items: center;
+  display: flex;
+  justify-content: center; /* Centers content horizontally */
+}
+
+.submit-button {
+  margin-top: 20px; /* Add space between the code placeholder and the button */
+  width: 100%; /* Match the width of the code placeholder if desired */
+  /* Adjust any additional styling as needed */
+}
+
+/* Maze components container with cleaner look */
+.maze-components-container {
+  padding: 16px;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: stretch; /* Stretches items to fill container */
+  background-color: #ffffff; /* White background for clean look */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+}
+
+/* Dropdowns with proper spacing and better interactivity */
+.dropdowns {
+  display: flex;
+  flex-direction: column;
+  padding: 8px; /* Reduced padding for a tighter layout */
+  gap: 8px; /* Reduced gap for a tighter layout */
+  background-color: #ffffff; /* White background for clean look */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .page-content {
+    width: 90%;
+    padding-top: 32px;
+  }
+
+  .output-box {
+    padding-left: 0;
+  }
+}
+
+/* Color scheme for elements */
+:root {
+  --light-blue: #b3e5fc;
+  --burnt-orange: #f57c00;
+  --white: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* Utilizing the color scheme */
+.header {
+  background-color: var(--white);
+}
+
+.maze-components-container,
+.dropdowns {
+  background-color: var(--white);
+}

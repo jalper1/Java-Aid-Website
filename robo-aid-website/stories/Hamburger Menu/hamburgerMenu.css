@@ -1,0 +1,30 @@
+.hamburger-icon {
+  cursor: pointer;
+  position: absolute;
+  z-index: 1;
+}
+.item {
+  cursor: pointer;
+}
+
+.menu-items {
+  margin-top: 8px;
+  position: fixed;
+  top: 64px;
+  left: -100%;
+  width: 200px;
+  height: 100%;
+  z-index: 0;
+  background-color: #333;
+  transition: left 0.3s ease;
+}
+
+.menu-items.open {
+  left: 0;
+}
+
+.menu-items .item {
+  padding: 16px;
+  color: #fff;
+  border-bottom: 1px solid #555;
+}

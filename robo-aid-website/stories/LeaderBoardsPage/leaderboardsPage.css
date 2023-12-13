@@ -1,0 +1,38 @@
+.title {
+  font-size: 24px;
+  text-align: center;
+}
+.table {
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+.table td,
+.table th {
+  padding: 8px;
+  border: 1px solid black;
+}
+
+.times {
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+}
+
+.clickable {
+  color: blue;
+  cursor: pointer;
+  padding: 8px;
+  margin-bottom: 16px;
+  justify-content: center;
+}
+.clickable {
+  color: blue;
+  cursor: pointer;
+  padding: 8px;
+  margin-bottom: 16px;
+}
+.times {
+  flex-direction: row;
+  display: flex;
+}
